@@ -30,7 +30,7 @@ RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
 
 CMD ["/bin/bash"]
 
-FROM node:alpine AS runtime
+FROM node:16-alpine AS runtime
 WORKDIR /home/node/
 COPY --from=builder /usr/local/bin/kubectl /usr/local/bin/kubectl
 COPY --from=builder /usr/local/bin/helm /usr/local/bin/helm
