@@ -37,5 +37,7 @@ COPY --from=builder /usr/local/bin/helm /usr/local/bin/helm
 COPY --from=builder /usr/bin/docker /usr/bin/docker
 RUN apk add gcompat
 COPY --from=builder /usr/local/bin/datree /usr/local/bin/datree
-
+RUN apk add curl
+ENV ENV="/root/.ashrc"
+RUN echo alias bash=/bin/sh > "$ENV"
 CMD ["/bin/sh"]
