@@ -39,4 +39,5 @@ RUN apk add gcompat
 COPY --from=builder /usr/local/bin/datree /usr/local/bin/datree
 RUN apk add curl
 RUN apk add --no-cache bash
+RUN apk add --no-cache sudo
 CMD ["/bin/bash"]
