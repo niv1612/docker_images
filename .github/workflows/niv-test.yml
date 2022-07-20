@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/niv1612/docker_images:main
-      credentials:
-        username: niv1612
-        password: ${{  secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
+#       credentials:
+#         username: niv1612
+#         password: ${{  secrets.DOCKER_CONTAINER_REGISTRY_TOKEN }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
